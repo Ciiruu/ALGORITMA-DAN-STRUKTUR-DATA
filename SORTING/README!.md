@@ -14,4 +14,5 @@ Bubble sort merupakan algoritma pengurutan yang membandingkan dua data yang berd
 Cara kerja dari Bubble Sort
 Bubble sort menggunakan teknik iterasi. Iterasi merupakan proses melakukan perulangan sebanyak data yang diketahui. Intinya pada iterasi melakukan perbandingan antara dua data.
 
-2. [
+2. [insertion](https://github.com/Ciiruu/ALGORITMA-DAN-STRUKTUR-DATA/tree/main/SORTING/INSERTION_SORT)
+
