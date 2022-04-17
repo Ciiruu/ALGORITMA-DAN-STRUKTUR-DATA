@@ -24,7 +24,7 @@ void awal()
         ptr->data = item;
         ptr->next = head;
         head = ptr;
-        printf("\n data berhasil disimpan di node awal");
+        printf("\ndata berhasil disimpan di node awal\n");
     }
 }
 void akhir()
@@ -38,14 +38,14 @@ void akhir()
     }
     else
     {
-        printf(" masukkan data;");
+        printf(" masukkan data: ");
         scanf("%d", &item);
         ptr->data = item;
         if (head == NULL)
         {
             ptr->next = NULL;
             head = ptr;
-            printf("berhasil disimpan");
+            printf("berhasil disimpan di NODE Akhir\n");
         }
         else
         {
@@ -56,7 +56,7 @@ void akhir()
             }
             temp->next = ptr;
             ptr->next = NULL;
-            printf("berhasil disimpan");
+            printf("berhasil disimpan\n");
         }
     }
 }
@@ -74,7 +74,7 @@ void sembarang()
         printf("masukan data: ");
         scanf("%d", &item);
         ptr->data = item;
-        printf("mau simpan dimana oi!: ");
+        printf("mau simpan dimana oi: ");
         scanf("%d", &lokasi);
         temp = head;
         for (i = 0; i < lokasi; i++)
@@ -88,7 +88,7 @@ void sembarang()
         }
         ptr->next = temp->next;
         temp->next = ptr;
-        printf("\n NODE berhasil disimpan");
+        printf("\nNODE berhasil disimpan\n");
     }
 }
 void lihat()
@@ -103,14 +103,15 @@ void lihat()
         }
         else
         {
-            printf(" cetak data..");
+            printf(" data yang tersimpan: ");
             while (ptr != NULL)
             {
-                printf("%d", ptr->data);
+                printf("%d - ", ptr->data);
                 ptr = ptr->next;
             }
+            printf("\n");
         }
-    };
+    }
 }
 
 int main()
@@ -119,9 +120,9 @@ int main()
     while (pilihan != 5) // 5 utk explicit
     {
         printf(" ==== MENU LINKED LIST ====");
-        printf("\n ==========================\n");
-        printf("\n 1. input data di node awal\n 2. input data di node akhir \n 3. input data di node sembarang\n 4. lihat data dlm linked list\n 5. keluar");
-        printf("\n pilihanihan : ");
+        printf("\n ==========================");
+        printf("\n 1. input data di node awal\n 2. input data di node akhir \n 3. input data di node sembarang\n 4. lihat data dlm linked list\n 5. hapus NODE\n 6. keluar");
+        printf("\n pilihan: ");
         scanf("%d", &pilihan);
 
         switch (pilihan)
@@ -142,7 +143,11 @@ int main()
             lihat();
             break;
 
-        case 5:
+            // case 5:
+            //     hapus();
+            //     break;
+
+        case 6:
             exit(0);
             break;
 
